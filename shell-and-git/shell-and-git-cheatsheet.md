@@ -15,4 +15,4 @@ git branch list your branches
 git branch -a list all branches (local and remote)
 git branch -d <branchname> delete a branch
 
-Remember: if you are in the current branch, just use git push to fetch the status of your post PR review
+Remember: if you are in the current branch, just use git pull to fetch the status of your post PR review
