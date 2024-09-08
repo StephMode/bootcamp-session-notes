@@ -2,6 +2,13 @@
 
 ## Preliminary Defintion
 
+_Git_ is a software developed by Linus Torvalds to provide software developers with a tool for Version Control. It stores the current status of a software in a "repository", which one can imagine as 1-n safe state(s) called a "commit". A "commit" contains the current status of the software as well as the history of all commits which preceded the most recent commit. A git repo is safed locally on the hard drive by default but can be used to share Version Control for a software project with others. Git is controlled through the CLI.
+
+_GitHub_ is a and web-app-based service which provides a GUI for Git and Version Control as well as software project management in the cloud. Its a service based on _Git_ providing services such as:
+
+- Online Live Access to the repos
+- Management of Branches and Commits in a GUI for better collaboration
+
 ## Important stuff about Git
 
 ## Important stuff about GitHub
