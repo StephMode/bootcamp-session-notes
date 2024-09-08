@@ -21,11 +21,85 @@ _GitHub_ is a and web-app-based service which provides a GUI for Git and Version
 
 ## Most Important CLI commands for Git and GitHub w/ workflows
 
-command functionality
-git switch -c <branchname> create a new branch and switch to it
-git switch <branchname> switch branches
-git branch list your branches
-git branch -a list all branches (local and remote)
-git branch -d <branchname> delete a branch
+### Initialize Repo
+
+1. Check Status of dir/repo
+
+```shell
+git status
+```
+
+2. Initialize repo
+
+```shell
+git init
+```
+
+### Create Commit Workflow
+
+1. Add files to the stage
+
+```shell
+git add <filename>
+```
+
+```shell
+git add .
+```
+
+if you want to add all
+
+2. Create a commit with a good note
+
+```shell
+git commit -m "note"
+```
+
+3. Push to remote repo
+
+```shell
+git push
+```
+
+### Delete repo
+
+```shell
+rm -rf ./git
+```
+
+- Removing the git folder turns a git repo back into a regular dir
+- This erases all commits as well
+
+### Manage branches
+
+```shell
+git switch -c <branchname>
+```
+
+create a new branch and switch to it
+
+```shell
+git switch <branchname>
+```
+
+switch branches
+
+```shell
+git branch
+```
+
+list your branches
+
+```shell
+git branch -a
+```
+
+list all branches (local and remote)
+
+```shell
+git branch -d <branchname>
+```
+
+delete a branch
 
 Remember: if you are in the current branch, just use git pull to fetch the status of your post PR review
