@@ -19,7 +19,7 @@ _GitHub_ is a and web-app-based service which provides a GUI for Git and Version
 - When pulling a remote repo from GitHub to (local) repo, use SSH and not HTTPS
 - Commit to repo and then push it to remote repo
 
-## Most Important CLI commands for Git and GitHub
+## Most Important CLI commands for Git and GitHub w/ workflows
 
 command functionality
 git switch -c <branchname> create a new branch and switch to it
