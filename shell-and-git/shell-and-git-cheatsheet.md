@@ -61,15 +61,6 @@ git commit -m "note"
 git push
 ```
 
-### Delete repo
-
-```shell
-rm -rf ./git
-```
-
-- Removing the git folder turns a git repo back into a regular dir
-- This erases all commits as well
-
 ### Manage branches
 
 ```shell
@@ -103,3 +94,22 @@ git branch -d <branchname>
 delete a branch
 
 Remember: if you are in the current branch, just use git pull to fetch the status of your post PR review
+
+Remove tracking branches from remote repos (on GitHub)
+
+```shell
+git fetch --prune
+```
+
+> Suppose you've previously fetched all branches from origin, including feature-branch. If someone deletes feature-branch from origin and you subsequently run git fetch --prune, Git will remove the remote-tracking branch origin/feature-branch from your local repository.
+
+> In summary, git fetch --prune is a command that updates your local repository with the latest changes from the remote repository and removes any remote-tracking branches that have been deleted on the remote side. This helps keep your local repository up-to-date and free from obsolete references.
+
+### Delete repo
+
+```shell
+rm -rf ./git
+```
+
+- Removing the git folder turns a git repo back into a regular dir
+- This erases all commits as well
