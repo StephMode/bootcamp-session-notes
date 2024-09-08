@@ -29,7 +29,9 @@ Given that repo is initialized(=exists) and on GitHub
 2. git commit -m ""
 3. git push
 
-### Initialize Repo
+### Initialize Repo - Git and Remote
+
+#### Git (local)
 
 1. Check Status of dir/repo
 
@@ -41,6 +43,24 @@ git status
 
 ```shell
 git init
+```
+
+#### GitHub (remote)
+
+1. Create Repo on GitHub
+2. Choose SSH as encryption method
+3. Copy into terminal in local repo
+
+```shell
+git remote add origin git@github.com:GitHubUsername/repository-name.git
+git branch -M main
+git push -u origin main
+```
+
+4. Check status of new remote repo
+
+```shell
+git remote -v
 ```
 
 ### Create Commit Workflow
