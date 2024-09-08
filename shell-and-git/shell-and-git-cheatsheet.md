@@ -21,6 +21,14 @@ _GitHub_ is a and web-app-based service which provides a GUI for Git and Version
 
 ## Most Important CLI commands for Git and GitHub w/ workflows
 
+### Git/GitHub ops workflow in a nutshell
+
+Given that repo is initialized(=exists) and on GitHub
+
+1. git add
+2. git commit -m ""
+3. git push
+
 ### Initialize Repo
 
 1. Check Status of dir/repo
