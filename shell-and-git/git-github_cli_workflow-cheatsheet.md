@@ -89,11 +89,20 @@ git commit -m "note"
 git push
 ```
 
+#### Get updates from GitHub
+
+```shell
+git pull
+```
+
+use this in the current branch if you made a commit from within GitHub
+
 ### Manage branches
 
 ```shell
 git branch branch-name
 ```
+
 create a new branch
 
 ```shell
