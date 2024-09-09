@@ -92,6 +92,11 @@ git push
 ### Manage branches
 
 ```shell
+git branch branch-name
+```
+create a new branch
+
+```shell
 git switch -c <branchname>
 ```
 
