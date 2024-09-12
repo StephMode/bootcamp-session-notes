@@ -1,0 +1,22 @@
+/* This is just temp for creating code snippets */
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.flex-item {
+  width: 46%;
+}
+
+h1 {
+  color: blue;
+  font-size: 12rem;
+}
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 20rem;
+  }
+}
