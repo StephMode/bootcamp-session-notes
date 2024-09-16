@@ -17,6 +17,32 @@ Addendum 15.09.24:
 
 - when it comes to solving challenges, try to think as simple as simple as possible to get the job done with a clean and working solution
 
+## Conditions
+
+### Comparison Operators
+
+| Operator  | Effect                                                                           |
+| --------- | -------------------------------------------------------------------------------- |
+| A `===` B | strict equal: is `true` if both values are equal (including their type).         |
+| A `!==` B | strict not equal: is `true` if both values are not equal (including their type). |
+| A `>` B   | strictly greater than: is `true` if A is greater than B.                         |
+| A `<` B   | strictly less than: is `true` if A is less than B.                               |
+| A `>=` B  | greater than or equal: is `true` if A is greater than or equal B.                |
+| A `<=` B  | less than or equal: is `true` if A is less than or equal B.                      |
+
+### Logical Operators
+
+| Operator                      | Effect                                                 |
+| ----------------------------- | ------------------------------------------------------ |
+| `!`A                          | `not`: flips a `true` value to `false` and vice versa. |
+| A <code>&#124;&#124;</code> B | `or`: is `true` if either A `or` B is true.            |
+| A `&&` B                      | `and`: is `true` if both A `and` B is true.            |
+
+### Control Flow if/else
+
+- Prüfkriterium in **const** in der function lagern, wenn es ein komplexeres statement bzw. eine JS method ist
+- bei comparison operations muss Prüfkriterium (ggf. in **const**) immer in beiden Teilen der Vergleichsoperation aufgerufen werden
+
 ## DOM (Document Object Model)
 
 ### Allgemein
