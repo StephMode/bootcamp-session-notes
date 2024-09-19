@@ -17,6 +17,11 @@ Addendum 15.09.24:
 
 - when it comes to solving challenges, try to think as simple as simple as possible to get the job done with a clean and working solution
 
+## functions
+
+- functions können in eventListener stehen und so ausgelöst werden. Sie könne auf diese Art auch input values als params aufnehmen (vgl. 11_js-functions/js-functions_pizza-analyzer)
+- Template literals _`${result}px`_ können verwendet werden, um Integer Eregbnisse in strings umzuwandeln, zB um sie als Maßeinheiten für HTML und CSS verfügbar zu machen
+
 ## Loops
 
 - Am besten ist es, wenn man die Veränderung im Codeblock des Loops ausführen lassen
