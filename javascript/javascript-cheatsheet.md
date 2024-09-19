@@ -17,6 +17,62 @@ Addendum 15.09.24:
 
 - when it comes to solving challenges, try to think as simple as simple as possible to get the job done with a clean and working solution
 
+## Loops
+
+- Am besten ist es, wenn man die Veränderung im Codeblock des Loops ausführen lassen
+- i (_iterator_) sind eine sehr kurze let, grenzen Einstiegspunkt bzw. Endpunkt der Schleife vor
+- Loops sind sehr beliebt bei Coding Challenges in Bewerbungsprozessen
+
+### while loops
+
+- eignen sich gut, um durch zu loopen, bis eine bestimmte Bedingung erreicht ist
+- eignet sich daher gut um zu loopen, wenn noch nicht ganz klar ist, wie lange gelooped werden sol
+
+#### Beipsiel: _Array durch iterieren bis_
+
+```JS
+const array = ["blue"; "green"; "red", "purple"];
+let i = 0;
+while (i < array.length) {
+  console.log(array[i]);
+  i = i + 1;
+}
+```
+
+### for loop
+
+- i werden innerhalb der Schleife deklariert
+- macht ähnliche Dinge wie _while_, aber ist andere Syntax
+- dieser Loop ist der klassische iterator, endet mit Endbedingung
+
+#### Beipsiel: _Array durch iterieren bis_
+
+damit fängt man von Anfang an, die iteration ist maximal so lang wie der array selbst, i++
+
+```JS
+const array = ["blue"; "green"; "red", "purple"];
+for (let i = 0; i < array.length; i++) {
+  console.log(array[i])
+}
+```
+
+### for … in loop
+
+-
+
+```JS
+const user = {
+  name: "Alex",
+  age = 11,
+  isAdmin = false,
+}
+for (const key in user) {
+  console.log(key + ": " + user[key]);
+}
+```
+
+### for … of loop
+
 ## Conditions
 
 ### Comparison Operators
