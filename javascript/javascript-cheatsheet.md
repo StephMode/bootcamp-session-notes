@@ -23,10 +23,21 @@ Addendum 15.09.24:
 - i (_iterator_) sind eine sehr kurze let, grenzen Einstiegspunkt bzw. Endpunkt der Schleife vor
 - Loops sind sehr beliebt bei Coding Challenges in Bewerbungsprozessen
 
+Klassische Loops
+
+1. while loop
+2. for loop
+
+   Moderne Loops(shorthand Varianten vvon _for_)
+
+   1. for … of
+   2. for … in
+
 ### while loops
 
 - eignen sich gut, um durch zu loopen, bis eine bestimmte Bedingung erreicht ist
-- eignet sich daher gut um zu loopen, wenn noch nicht ganz klar ist, wie lange gelooped werden sol
+- eignet sich daher gut um zu loopen, wenn noch nicht ganz klar ist, wie lange gelooped werden soll
+- wird so lange ausgeführt, bis condition **'true'**
 
 #### Beipsiel: _Array durch iterieren bis_
 
@@ -44,6 +55,27 @@ while (i < array.length) {
 - i werden innerhalb der Schleife deklariert
 - macht ähnliche Dinge wie _while_, aber ist andere Syntax
 - dieser Loop ist der klassische iterator, endet mit Endbedingung
+- wird ausgeführt bis condition **'false'**
+
+#### Bestandteile for loop
+
+```JS
+for (initilization; condition; afterthought) statemet;
+```
+
+_bzw._
+
+```JS
+for (initilization; condition; afterthought) {
+  statement;
+  statement;
+}
+```
+
+- **initilization**: diese expression, kann auch eine variable sein, wird 1 bis -n mal ausgeführt
+- **condition**: ist die Begrenzung für die Ausfühung, also so lange diese condition **'true'** ist, wird gelooped
+- **afterthought**: wird nach dem loop statement ausgeführt
+- **statement**: wird ausgeführt solange **condition** = true;
 
 #### Beipsiel: _Array durch iterieren bis_
 
@@ -58,7 +90,9 @@ for (let i = 0; i < array.length; i++) {
 
 ### for … in loop
 
--
+- idR shorthand notation, um durch alle keys eines object zu iterieren
+
+#### Beipsiel: iterieren durch object
 
 ```JS
 const user = {
@@ -72,6 +106,22 @@ for (const key in user) {
 ```
 
 ### for … of loop
+
+- shorthand quotation, um durch items eines array zu loopen
+
+#### Beipsiel: iterieren durch array
+
+```JS
+const fruits = ["apple", "banana", "melon"];
+
+for (const fruit of fruits) {
+  console.log(fruit);
+}
+
+// 'apple'
+// 'banana'
+// 'melon'
+```
 
 ## Conditions
 
