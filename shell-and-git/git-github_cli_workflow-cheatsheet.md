@@ -21,6 +21,8 @@ _GitHub_ is a and web-app-based service which provides a GUI for Git and Version
 
 ## Most Important CLI commands for Git and GitHub w/ workflows
 
+👆🏻 hier müssen Unterkapitel zu den commands und ops aus "git-advanced" hinzugefügt werden
+
 ### Git/GitHub ops workflow in a nutshell
 
 Given that repo is initialized(=exists) and on GitHub
@@ -28,6 +30,8 @@ Given that repo is initialized(=exists) and on GitHub
 1. git add
 2. git commit -m ""
 3. git push
+
+👆🏻 das hier muss um die commands und ops aus "git-advanced" erweitert werden
 
 ### Initialize Repo - Git and Remote
 
