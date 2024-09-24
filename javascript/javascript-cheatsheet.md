@@ -18,6 +18,246 @@ Addendum 15.09.24:
 
 - functions können in eventListener stehen und so ausgelöst werden. Sie könne auf diese Art auch input values als params aufnehmen (vgl. 11_js-functions/js-functions_pizza-analyzer)
 - Template literals _`${result}px`_ können verwendet werden, um Integer Eregbnisse in strings umzuwandeln, zB um sie als Maßeinheiten für HTML und CSS verfügbar zu machen
+- **parameter** ermöglichen einer Funktion grundsätzlich, etwas anderes zu empfangen
+
+# methods
+
+## Array methods
+
+Das wird sehr wichtig für react
+
+Kann man gut für if/else statments in fn verwenden
+
+Bsp
+
+if (string.includes"React") do, else do
+
+bei den methods handelt es sich um higher order functions, die in der Regel eine andere function als Argument erwarten
+
+```JS
+
+function greetCoach() {
+  console.log("hello coach");
+}
+
+// Higher Order Function = fn, die andere fn als Argument erwartet
+
+function doSomethingXtimes(number, functionToExecute) {
+  for (let i = 0; index < number; index++) {
+    functionToExecute();
+  }
+}
+
+// fn call
+
+doSomethingXtimes(4, greetCoach);
+
+// fn call mit neuer fn (braucht man => fat arrow fn)
+
+doSomethingXtimes(10, function (param) {
+  console.log(param);
+});
+doSomethingXtimes(10, () => {
+  console.log("anonymFn");
+});
+
+// forEach ist eine Higher Order fn, die eine Funktion als Argument erwartet
+// Sie ruft diese Funktion auf und übergibt ihr jedes Element als Argument
+// forEach return nichts (void function)
+// wir führen mit jedem array element ienne Seiteneffekt aus
+
+const result2 = games.forEach((element) => {
+  console.log(element);
+  const card = document.createElement("div");
+  card.classList.add("card");
+  card.textContent = element.toUpperCase();
+  document.body(card);
+});
+
+// (element) meint jedes Objekt aus dem arr mit dem games
+
+// MAP manipuliert jedes Element, Das neue Array mit den manipulierten Elementen wird returnt.
+// map nimmt aus einem array und ermöglicht, die genommenen Daten zu manipulieren. Dabei werden die Ursprungsdaten nicht
+
+const strings = ["aa", "bb"];
+
+const upperCaseString = strings.map(element) => {
+  // return element.toUpperCase();
+  // um nur die Damen
+  return element.name;
+};
+// upperCaseString ist das neu ausgegebene, manipulierte array
+
+
+const gameNames = games.map(element) => {
+  // um nur die Namen aus den Objects im array zu holen
+  return element.name;
+};
+console.log{gameNames};
+
+// FITLER checkt jedes ELement nach einer Bedingung
+// Wenn die fn true returnded,
+// wird jedes Element in neues array gepackt
+// fitler manipuliert nichts
+
+const gamesBefore2000 = games.filter(
+  (game)=>{
+    if (game.publishingYear < 2000){
+      return true;
+    } else {
+      return false;
+    }
+  }
+)
+console.log(gamesBefore2000);
+
+const gamesDeviceIsPS2 = games.filter(
+  (game)=>{
+    if (game.devices.includes("PS2"))
+      // (game.devices) === "PS2")
+      // notation war grundsätzlich nicht falsch, aber mit === komme ich nicht weiter
+      // brauche hier die .includes methode
+      // if (!game.devices.includes("PS2")) returned falschen Wert
+      {
+      return true;
+    } else {
+      return false
+    }
+  }
+)
+
+// andere Schreibweise
+
+const gamesForPS2 = games.filter((game) => {
+  return game.devices.includes("PS2")
+  // große Fehlerquelle ist hier oft, dass das return vergessen wird
+});
+
+// return value ist ein array
+
+//  FIND prüft die Elemente auf eine Bedingung
+// Wein ein Element die Beding erfüllt, wird dieses returned
+// und es wird nicht weiter gesucht
+// effizient, wenn man nur bis zu gegeben Punkt suchen will
+
+const searchResult = games.find((game) => {
+  return game.name === "Title";
+});
+
+// Bonusfrage: was war nochmal implicit return statement?
+
+const searchResult = games.find((game) =>
+game.id === 8);
+
+
+
+// andere Schreibweise
+
+const gamesForPS2 = games.filter((game) => {
+return game.devices.includes("PS2")
+// große Fehlerquelle ist hier oft, dass das return vergessen wird
+});
+
+// return value ist ein array
+
+// FIND prüft die Elemente auf eine Bedingung
+// Wein ein Element die Beding erfüllt, wird dieses returned
+// und es wird nicht weiter gesucht
+// effizient, wenn man nur bis zu gegeben Punkt suchen will
+
+const searchResult = games.find((game) => {
+return game.name === "Title";
+});
+
+// Bonusfrage: was war nochmal implicit return statement?
+
+const searchResult = games.find((game) =>
+game.id === 8);
+
+```
+
+// andere Schreibweise
+
+const gamesForPS2 = games.filter((game) => {
+return game.devices.includes("PS2")
+// große Fehlerquelle ist hier oft, dass das return vergessen wird
+});
+
+// return value ist ein array
+
+// FIND prüft die Elemente auf eine Bedingung
+// Wein ein Element die Beding erfüllt, wird dieses returned
+// und es wird nicht weiter gesucht
+// effizient, wenn man nur bis zu gegeben Punkt suchen will
+
+const searchResult = games.find((game) => {
+return game.name === "Title";
+});
+
+// Bonusfrage: was war nochmal implicit return statement?
+
+const searchResult = games.find((game) =>
+game.id === 8);
+
+```
+
+}
+)
+
+// andere Schreibweise
+
+const gamesForPS2 = games.filter((game) => {
+return game.devices.includes("PS2")
+// große Fehlerquelle ist hier oft, dass das return vergessen wird
+});
+
+// return value ist ein array
+
+// FIND prüft die Elemente auf eine Bedingung
+// Wein ein Element die Beding erfüllt, wird dieses returned
+// und es wird nicht weiter gesucht
+// effizient, wenn man nur bis zu gegeben Punkt suchen will
+
+const searchResult = games.find((game) => {
+return game.name === "Title";
+});
+
+// Bonusfrage: was war nochmal implicit return statement?
+
+const searchResult = games.find((game) =>
+game.id === 8);
+
+```
+
+### Objects
+
+Structured datatypes which couple their values not to an index (as arrays do), but to a unique key (key value pairs).
+
+```JS
+const person = {
+  name: "Max Paddington",
+  age: 21,
+  isStudent: false,
+  adress: {
+    street: "Paddington Street",
+    houseNumber: 23,
+    city: "London",
+  },
+};
+
+// Access porperties of an object:
+
+person.age; // 21
+person["name"]; // "Max Paddington"
+
+person.adress.city; // "London"
+person.adress["city"]; // same
+
+// Ading & deleting properties
+
+person.score = 1;
+delete person.score;
+```
 
 # Data Types
 
@@ -54,36 +294,6 @@ shoppingList[0]; // "apple"
 
 const nestedArray = ["a", 1, ["a", "new", "sentence"], false];
 nestedArray[2][1]; // "new"
-```
-
-### Objects
-
-Structured datatypes which couple their values not to an index (as arrays do), but to a unique key (key value pairs).
-
-```JS
-const person = {
-  name: "Max Paddington",
-  age: 21,
-  isStudent: false,
-  adress: {
-    street: "Paddington Street",
-    houseNumber: 23,
-    city: "London",
-  },
-};
-
-// Access porperties of an object:
-
-person.age; // 21
-person["name"]; // "Max Paddington"
-
-person.adress.city; // "London"
-person.adress["city"]; // same
-
-// Ading & deleting properties
-
-person.score = 1;
-delete person.score;
 ```
 
 #### Arrays & Objects nested into each other
@@ -144,7 +354,7 @@ Klassische Loops
    1. for … of
    2. for … in
 
-## while loops
+## while loop
 
 - eignen sich gut, um durch zu loopen, bis eine bestimmte Bedingung erreicht ist
 - eignet sich daher gut um zu loopen, wenn noch nicht ganz klar ist, wie lange gelooped werden soll
