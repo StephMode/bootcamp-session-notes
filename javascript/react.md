@@ -232,3 +232,5 @@ useEffect(() => {
   // This runs on mount *and also* if either a or b have changed since the last render
 }, [a, b]);
 ```
+
+Which other hooks are relevant?
